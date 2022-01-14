@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata para PWA -->
+
+    <!-- Modifica color en la barra de estado -->
+    <meta name="theme-color" content="#41b883">
+    <!-- Optimiza del lado de SEO -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandhelpFriendly" content="true">
+
+    <!-- Modificar barra de estado en IOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Contador App</title>
+
+    <!-- ICONOS -->
+    <link rel="shortcurt icon" href="./img/icon.png" type="img/png">
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <link rel="apple-touch-startup-image" href="img/icon.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1>
+        <hr>
+        <h2 class="count">{{count}}</h2>
+        <hr>
+        <!-- v-on para eventos, v-on:click para llamar funciones -->
+        <!-- <button v-on:click="disCount"> -1 </button> -->
+        <!-- uso de v-on:click abreviado con -->
+        <!-- <button @click="addCount"> +1 </button> -->
+        <button @click="modCount('dis')"> -1 </button>
+        <button @click="modCount"> +1 </button>
+
+    </div>
+    <script src="./load.js"></script>
+    <script src="./Js/main.js"></script>
+    <script src="./Js/mountApp.js"></script>
+</body>
+</html>
